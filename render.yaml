@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tailscale-vpn
+    runtime: image
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TAILSCALE_AUTHKEY
+        sync: false
